@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function Home(){
     return (
         <div>
-            <Link prefetch={false} href={{
+            <Link legacyBehavior = {true} prefetch={false} href={{
                 pathname: '/[username]',
                 query: {username: 'jeffd23'},
             }}>

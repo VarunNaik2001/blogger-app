@@ -10,7 +10,7 @@ export default function Navbar(): JSX.Element{
         <nav className="navbar">
             <ul>
                 <li>
-                    <Link href="/">
+                    <Link  legacyBehavior = {true} href="/">
                         <button className="btn-logo">FEED</button>
                     </Link>
                 </li>
@@ -20,13 +20,13 @@ export default function Navbar(): JSX.Element{
                 {username && (
                     <>
                     <li className="push-left">
-                        <Link href='/admin'>
+                        <Link legacyBehavior = {true} href='/admin'>
                             <button className="btn-blue">Write Posts</button>
                         </Link>
                     </li>
 
                     <li>
-                        <Link href={`/${username}`}>
+                        <Link legacyBehavior = {true} href={`/${username}`}>
                             <img src={user?.photoURL} />
                         </Link>
 
@@ -38,7 +38,7 @@ export default function Navbar(): JSX.Element{
                 {/*User is not signed in OR has not created a username */}
                 {!username &&(
                     <li>
-                        <Link href='/enter'>
+                        <Link  legacyBehavior = {true} href='/enter'>
                             <button className="btn-blue">Log In</button>
                         </Link>
                     </li>
